@@ -7,9 +7,9 @@ I often work with large documents and it's difficult to see the differences betw
 
 JSON Diff sorts, formats, and compares two JSON documents to find the actual semantic differences instead of just the text ones.
 
-Try it out:  [http://www.jsondiff.com](http://www.jsondiff.com)
+Try it out:  [http://jsondiff.yzlab.top](http://jsondiff.yzlab.top)
 
-Run the built-in unit tests:  [http://www.jsondiff.com/index-test.html](http://www.jsondiff.com/index-test.html)
+Run the built-in unit tests:  [http://jsondiff.yzlab.top/index-test.html](http://jsondiff.yzlab.top/index-test.html)
 
 
 ## Run JSONDiff in a Docker container
@@ -48,7 +48,7 @@ JSONDiff also supports two query paramaters so you can load your JSON data from 
 These parameters work like this:
 
 ```
-https://jsondiff.com/?left=https://jsondiff.com/one.json&right=https://jsondiff.com/two.json
+https://jsondiff.yzlab.top/?left=https://jsondiff.yzlab.top/one.json&right=https://jsondiff.yzlab.top/two.json
 ```
 
 Each parameter must be a full URL and must be publicly accessible over the Internet.
@@ -59,13 +59,13 @@ JSONDiff does all of the comparing and rendering right in your browser.  That me
 
 We have two sample files from the Pokemon Go API describing the Pokemon Charmander: `charmander_left.json` and `charmander_right.json`.  Each of these files are over 240 kb and almost 13,000 lines when formatted.  You can load and compare them with a single URL:
 
-[https://jsondiff.com/?left=https://jsondiff.com/charmander_left.json&right=https://jsondiff.com/charmander_right.json](https://jsondiff.com/?left=https://jsondiff.com/charmander_left.json&right=https://jsondiff.com/charmander_right.json)
+[https://jsondiff.yzlab.top/?left=https://jsondiff.yzlab.top/charmander_left.json&right=https://jsondiff.yzlab.top/charmander_right.json](https://jsondiff.yzlab.top/?left=https://jsondiff.yzlab.top/charmander_left.json&right=https://jsondiff.yzlab.top/charmander_right.json)
 
 Thanks to some recent performance improvements from [@Pluckerpluck](https://www.github.com/Pluckerpluck) you can now compare the two in just a few seconds.  Click the URL above and try it out for yourself.
 
 ## Is JSONDiff Secure?
 
-You might notice that [http://www.jsondiff.com](http://www.jsondiff.com) doesn't run with HTTPS and ask, is JSONDiff secure?  The short answer is yes, but you shouldn't take my word for it.  
+You might notice that [http://jsondiff.yzlab.top](http://jsondiff.yzlab.top) doesn't run with HTTPS and ask, is JSONDiff secure?  The short answer is yes, but you shouldn't take my word for it.  
 
 JSONDiff does all of the comparing in the browser.  It never sends any of your JSON data anywhere and you can run a little experiment to prove it.  
 
@@ -88,7 +88,7 @@ JSONDiff loads the following files when it first starts up:
 | `jquery.min.js` | jQuery library used in the JSONDiff UI |
 | `jsl.format.js` and `jsl.parser.js` | The JSON formatter and parser that JSONDiff uses when doing a compare |
 | `jdd.js` | The code that runs JSONDiff |
-| `analytics.js` | Google Analytics that we use to see how many people are using JSONDiff.com |
+| `analytics.js` | Google Analytics that we use to see how many people are using jsondiff.yzlab.top |
 | `favicon.ico` | The JSONDiff icon that shows up in the tab of your browser |
 
 ### What data does JSONDiff send back over the Internet?
@@ -103,7 +103,7 @@ This readme file just gives the high level details of the security of JSONDiff. 
 
 Given the fact we don't send any data over the Internet you might ask why we're using HTTPS.  We don't have any data to encrypt.  
 
-HTTPS provides encryption of the data, but it also provides verification of the identity of the site.  HTTPS guarantees that we are who we say we are and you aren't getting a man in the middle attack where a different site is pretending to be JSONDiff.com.
+HTTPS provides encryption of the data, but it also provides verification of the identity of the site.  HTTPS guarantees that we are who we say we are and you aren't getting a man in the middle attack where a different site is pretending to be jsondiff.yzlab.top.
 
 ### That still doesn't feel secure enough
 

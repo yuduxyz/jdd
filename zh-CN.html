@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description"
-        content="Validate, format, and compare two JSON documents.  See the differences between the objects instead of just the new lines and mixed up properties.">
+        content="验证、格式化和比较两个JSON文档。查看对象之间的差异，而不仅仅是新行和混乱的属性。">
     <meta keywords="jsondiff, json diff, json compare">
-    <title>JSON Diff - The semantic JSON compare tool</title>
+    <title>JSON Diff - 语义化的JSON比较工具</title>
 
     <link rel="stylesheet" href="reset.css" type="text/css" media="screen">
     <link rel="stylesheet" href="throbber.css" type="text/css" media="screen">
@@ -32,21 +32,20 @@
     <div id="main">
         <div class="header">
             <h1>JSON Diff</h1>
-            <h3>The semantic JSON compare tool</h3>
+            <h3>语义化的JSON比较工具</h3>
 
             <div class="weak">
                 <p>
-                    Validate, format, and compare two JSON documents. See the differences between the objects instead of
-                    just the new lines and mixed up properties.
+                    验证、格式化并比较两个JSON文档。查看对象之间的不同之处，而不仅仅是换行符和混淆的属性。
                 </p>
 
                 <p>
-                    Created by <a href="http://www.zackgrossbart.com">Zack Grossbart</a>. Get the <a
-                        href="https://github.com/zgrossbart/jdd">source code</a>.
+                    由 <a href="http://www.zackgrossbart.com">Zack Grossbart</a> 创建. 获取<a
+                        href="https://github.com/zgrossbart/jdd">源码</a>.
                 </p>
 
                 <p>
-                    Big thanks owed to the team behind <a href="http://www.jsonlint.com">JSONLint</a>.
+                    鸣谢 <a href="http://www.jsonlint.com">JSONLint</a>.
                 </p>
 
             </div>
@@ -67,25 +66,25 @@
 
         <div class="initContainer">
             <div class="left">
-                <textarea spellcheck="false" id="textarealeft" placeholder="Enter JSON to compare, enter an URL to JSON"
+                <textarea spellcheck="false" id="textarealeft" placeholder="输入要比较的JSON或输入JSON的URL。"
                     tabindex="1"></textarea>
                 <pre id="errorLeft" class="error"></pre>
-                <span class="fileInput">or <input type="file" id="fileLeft"
+                <span class="fileInput">或 <input type="file" id="fileLeft"
                         onchange="jdd.handleFiles(this.files, 'left')" tabindex="4"></span>
             </div>
 
             <div class="center">
-                <button id="compare" tabindex="3">Compare</button>
+                <button id="compare" tabindex="3">开始对比</button>
                 <div class="throbber-loader"></div>
                 <br /><br />
-                or try some<br /><a href="#" id="sample">sample data</a>
+                或使用<br /><a href="#" id="sample">样例数据</a>
             </div>
 
             <div class="right">
                 <textarea spellcheck="false" class="right" id="textarearight"
-                    placeholder="Enter JSON to compare, enter an URL to JSON" tabindex="2"></textarea>
+                    placeholder="输入要比较的JSON或输入JSON的URL。" tabindex="2"></textarea>
                 <pre id="errorRight" class="error"></pre>
-                <span class="fileInput">or <input type="file" id="fileRight"
+                <span class="fileInput">或 <input type="file" id="fileRight"
                         onchange="jdd.handleFiles(this.files, 'right')" tabindex="5"></span>
             </div>
         </div>
